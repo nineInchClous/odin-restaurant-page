@@ -1,0 +1,114 @@
+/* #region Import */
+@import "normalize.css", "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* #endregion */
+
+/* #region Variables */
+$purple: #cdb4db;
+$light-pink: #ffc8dd;
+$pink: #ffafcc;
+$light-blue: #bde0fe;
+$blue: #a2d2ff;
+$white: #eee;
+$black: #333;
+
+$transition: all 0.2s ease;
+$padding: 20px;
+$radius: 10px;
+$shadow: 3px 3px 3px 0px rgba(51, 51, 51, 0.6);
+
+/* #endregion */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.3;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: $purple;
+    padding: $padding;
+}
+
+#banner {
+    position: relative;
+    img {
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+        display: block;
+    }
+    h2 {
+        position: absolute;
+        color: $black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 175, 204, 0.9);
+        padding: 30px;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: $shadow;
+    }
+}
+
+#paragraphs {
+    .img-and-paragraph {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $light-blue;
+
+        &:nth-child(even) {
+            background-color: $light-pink;
+        }
+
+        img {
+            max-width: 50vw;
+            object-fit: cover;
+            
+        }
+        p {
+            padding: 40px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple;
+    padding: $padding;
+
+    svg {
+        width: 50px;
+        margin-left: 20px;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+    }
+}

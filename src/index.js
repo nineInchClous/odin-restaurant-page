@@ -1,5 +1,5 @@
 //#region Imports
-import './style.scss';
+import './style/styles.scss';
 //#endregion
 
 console.log('hello');
