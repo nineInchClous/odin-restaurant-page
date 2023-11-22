@@ -9,7 +9,7 @@ $light-pink: #ffc8dd;
 $pink: #ffafcc;
 $light-blue: #bde0fe;
 $blue: #a2d2ff;
-$white: #eee;
+$white: #efefef;
 $black: #333;
 
 $transition: all 0.2s ease;
@@ -27,6 +27,7 @@ $shadow: 3px 3px 3px 0px rgba(51, 51, 51, 0.6);
 
 body {
     font-family: 'Libre Baskerville', serif;
+    background-color: $white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,9 +55,7 @@ header {
 
     .btn-container {
         button {
-            &:nth-child(odd) {
-                background-color: $blue;
-            }
+            background-color: $blue;
             &:nth-child(even) {
                 background-color: $pink;
             }
@@ -123,6 +122,50 @@ header {
             font-size: 1.2rem;
         }
     }
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px;
+    
+    .menu-card {
+        &:nth-child(odd) {
+            background-color: $light-pink;
+        }
+
+        background-color: $light-blue;
+        border-radius: 5px;
+        box-shadow: $shadow;
+
+        img {
+            width: 100%;
+            height: 25vw;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            object-fit: cover;
+        }
+        div {
+            padding: 10px 20px;
+
+            h3 {
+                margin-bottom: 20px;
+                font-size: 1.5rem;
+            }
+            h4 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.title {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
 }
 
 footer {

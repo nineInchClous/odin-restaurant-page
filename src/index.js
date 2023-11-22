@@ -8,11 +8,10 @@ import loadContactPage from './js/contactPageLoader';
 //#endregion
 
 const content = document.getElementById('content');
-const header = loadHeader();
 
-content.appendChild(header);
-content.appendChild(loadHomePage());
-content.appendChild(loadFooter());
+content.before(loadHeader());
+// content.appendChild(loadHomePage());
+content.after(loadFooter());
 
 const homeBtn = document.getElementById('home-btn');
 const menuBtn = document.getElementById('menu-btn');
@@ -20,18 +19,18 @@ const contactBtn = document.getElementById('contact-btn');
 activeBtn(homeBtn);
 
 document.getElementById('home-btn').addEventListener('click', () => {
-    document.getElementsByTagName('main')[0].remove();
-    header.after(loadHomePage());
+    content.innerHTML = '';
+    content.appendChild(loadHomePage());
     activeBtn(homeBtn);
 });
 document.getElementById('menu-btn').addEventListener('click', () => {
-    document.getElementsByTagName('main')[0].remove();
-    header.after(loadMenuPage());
+    content.innerHTML = '';
+    content.appendChild(loadMenuPage());
     activeBtn(menuBtn);
 });
 document.getElementById('contact-btn').addEventListener('click', () => {
-    document.getElementsByTagName('main')[0].remove();
-    header.after(loadContactPage());
+    content.innerHTML = '';
+    content.appendChild(loadContactPage());
     activeBtn(contactBtn);
 });
 
