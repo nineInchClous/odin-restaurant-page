@@ -2,9 +2,26 @@ import githubLogo from '../img/GitHub_logo.png';
 
 export function loadHeader() {
     let header = document.createElement('header');
-    let h2 = document.createElement('h2');
-    h2.textContent = 'Fluffy pancake paradise';
-    header.appendChild(h2);
+    let h1 = document.createElement('h1');
+    h1.textContent = 'Fluffy pancake paradise';
+
+    let divBtns = document.createElement('div');
+    divBtns.className = 'btn-container';
+    let homeBtn = document.createElement('button');
+    homeBtn.textContent = 'Home';
+    homeBtn.id = 'home-btn';
+    let menuBtn = document.createElement('button');
+    menuBtn.textContent = 'Menu';
+    menuBtn.id = 'menu-btn';
+    let contactBtn = document.createElement('button');
+    contactBtn.textContent = 'Contact';
+    contactBtn.id = 'contact-btn';
+
+    divBtns.appendChild(homeBtn);
+    divBtns.appendChild(menuBtn);
+    divBtns.appendChild(contactBtn);
+    header.appendChild(h1);
+    header.appendChild(divBtns);
 
     return header;
 }
