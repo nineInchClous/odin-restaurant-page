@@ -10,7 +10,7 @@ import loadContactPage from './js/contactPageLoader';
 const content = document.getElementById('content');
 
 content.before(loadHeader());
-// content.appendChild(loadHomePage());
+content.appendChild(loadHomePage());
 content.after(loadFooter());
 
 const homeBtn = document.getElementById('home-btn');
